@@ -8,7 +8,7 @@ if (address) {
         if (error) {
             return console.log(error)
         }
-        forecast(longitude, latitude, (error, { description, temperature, humidity } = {}) => {
+        forecast(longitude, latitude, (error, { description, temperature, humidity, wind_speed } = {}) => {
             if (error) {
                 return console.log(error);
             }
@@ -16,6 +16,7 @@ if (address) {
             console.log('Situation:', description);
             console.log('Temperature:', temperature);
             console.log('Humidity:', humidity);
+            console.log('wind speed:', wind_speed)
         })
     })
 } else {
